@@ -25,8 +25,12 @@ def score(a, b, win):
         print('B: ADB')
     elif win == 'A':
         print('A: ' + str(scoreArr[a]))
+        if a==b:
+            print('DUCE')
     elif win == 'B':
         print('B: ' + str(scoreArr[b]))
+    if a == b == 3:
+        print('DUCE +++ ')
 
 
 with open('input.txt', 'r') as input:
@@ -42,5 +46,3 @@ with open('input.txt', 'r') as input:
             elif winner == 'B':
                 b = b + 1
                 score(a, b, winner)
-            # print(a,b)
-        # print(win)
