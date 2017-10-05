@@ -1,12 +1,4 @@
 import sys
-# import argparse
-#
-# parser = argparse.ArgumentParser()
-# parser.add_argument("text", default="input.txt", action='store_true')
-# t = parser.parse_args().text
-# print(t)
-# print(t is bool)
-# print(isinstance(t, bool))
 if len(sys.argv) > 1:
     input = sys.argv[1]
 else:
@@ -21,7 +13,7 @@ def score(a, b, win):
     elif b > 3 and b - a >=2:
         print('B: WIN')
         return True
-    elif a > 3 and b> 3 and a==b:
+    elif a > 3 and b > 3 and a==b:
         print(win + ': ADV')
         print('DUCE')
     elif a >= 4 and win == 'A':
